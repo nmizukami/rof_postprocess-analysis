@@ -70,3 +70,12 @@ def reorder_index(ID_array_orig, ID_array_target):
     sorted_index = np.searchsorted(sorted_x, ID_array_target)
 
     return np.take(index, sorted_index, mode="clip")
+
+
+def no_time_variable(ds):
+    vars_without_time = []
+    for var in ds.variables:
+        if 'time' not in ds[var].dims:
+            if var not in list(ds.coords):
+                vars_without_time.append(var)
+    return vars_without_time
