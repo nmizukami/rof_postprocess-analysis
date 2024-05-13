@@ -96,3 +96,5 @@ toberemoved
 notebook/test*.ipynb
 notebook/NT_*.ipynb
 *.nc
+*.png
+*.gpkg
