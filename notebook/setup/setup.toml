@@ -106,7 +106,7 @@ eyr = 1980   # analysis end yr
         down_id_name='NextDownID'
         
     [reach_gpkg.mosart] # global MOSART 0.5
-        file_name='mosart0.5_stream.gpkg'          
+        file_name='MOSART_routing_Global_0.5x0.5_c170601_flowline.gpkg'
         id_name='seg_id'
         down_id_name='Tosegment'
 
@@ -126,8 +126,8 @@ eyr = 1980   # analysis end yr
         id_name='hruid'
         
     [catch_gpkg.mosart] # global MOSART 0.5
-        file_name='mosart0.5_global_land.gpkg'
-        id_name='hru_id'
+        file_name='MOSART_routing_Global_0.5x0.5_c170601_hru.gpkg'
+        id_name='hruid'
 
 # river network data (mizuRoute format, augumented one)
 # sub-key is network name
@@ -137,7 +137,7 @@ eyr = 1980   # analysis end yr
         reach_ID ='seg_id'
 
     [river_network.HDMA_lake] # global HDMA lake
-        file_name='Network_topology_HDMA_HydroLake_v3_aug.nc'
+        file_name='Network_topology_HDMA_HydroLake_v3.aug.nc'
         reach_ID ='seg_id'
         
     [river_network.MERIT_Hydro] # global MERIT
@@ -145,6 +145,6 @@ eyr = 1980   # analysis end yr
         reach_ID ='seg_id'
         
     [river_network.mosart] # global MOSART 0.5
-        file_name='mizuRoute_MOSART_Global_half_20161105a_aug.nc'       # MOSART simulation use [-180 180] grids
+        file_name='mizuRoute_MOSART_routing_Global_0.5x0.5_c170601.aug.nc'       # MOSART simulation use [-180 180] grids
         #file_name='mizuRoute_MOSART_Global_half_20161105a_360_aug.nc'  # mizuRoute simulation used [0 360] based network and mesh. In the future should use [-180 180] grid (above) for simulation
         reach_ID ='seg_id'  
