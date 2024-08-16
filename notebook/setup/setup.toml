@@ -18,23 +18,23 @@ eyr = 1980   # analysis end yr
         model='mizuroute'
         network_type='vector'
         domain_nc="None"
-        flow_name='IRFroutedRunoff'
+        flow_name='DWroutedRunoff'
         runoff_name='basRunoff'
         color='xkcd:red'
-    [rof_grid.rHDMAlk_dfw]
+    [rof_grid.rHDMAlk_h06]
         network='HDMA_lake'
         model='mizuroute'
         network_type='vector'
         domain_nc="None"
         flow_name='DWroutedRunoff'
         runoff_name='basRunoff'
-        color='xkcd:orange'
-    [rof_grid.rHDMAlk_irrig]
+        color='xkcd:blue'
+    [rof_grid.rHDMAlk_irrig_limited]
         network='HDMA_lake'
         model='mizuroute'
         network_type='vector'
         domain_nc="None"
-        flow_name='IRFroutedRunoff'
+        flow_name='DWroutedRunoff'
         runoff_name='basRunoff'
         color='xkcd:green'
     [rof_grid.rHDMAlk_irrig_unlimited]
@@ -42,7 +42,7 @@ eyr = 1980   # analysis end yr
         model='mizuroute'
         network_type='vector'
         domain_nc="None"
-        flow_name='IRFroutedRunoff'
+        flow_name='DWroutedRunoff'
         runoff_name='basRunoff'
         color='xkcd:magenta'
     [rof_grid.rHDMAlk_irrig_groundwater]
@@ -50,7 +50,7 @@ eyr = 1980   # analysis end yr
         model='mizuroute'
         network_type='vector'
         domain_nc="None"
-        flow_name='IRFroutedRunoff'
+        flow_name='DWroutedRunoff'
         runoff_name='basRunoff'
         color='xkcd:magenta'
     [rof_grid.rHDMA]
@@ -58,7 +58,7 @@ eyr = 1980   # analysis end yr
         model='mizuroute'
         network_type='vector'
         domain_nc="None"
-        flow_name='IRFroutedRunoff'
+        flow_name='DWroutedRunoff'
         runoff_name='basRunoff'
         color='xkcd:blue'
     [rof_grid.rMERIT]
@@ -66,7 +66,7 @@ eyr = 1980   # analysis end yr
         model='mizuroute'
         network_type='vector'
         domain_nc="None"
-        flow_name='IRFroutedRunoff'
+        flow_name='DWroutedRunoff'
         runoff_name='basRunoff'
         color='xkcd:green'
     [rof_grid.f09_f09]
@@ -74,7 +74,7 @@ eyr = 1980   # analysis end yr
          model='mizuroute'
          network_type='vector'
          domain_nc='None'
-         flow_name='IRFroutedRunoff'
+         flow_name='DWroutedRunoff'
          runoff_name='basRunoff'
          color='xkcd:green'
     [rof_grid.f09_f09_mosart]
