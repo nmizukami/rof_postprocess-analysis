@@ -22,13 +22,13 @@ eyr = 1980   # analysis end yr
         runoff_name='basRunoff'
         color='xkcd:red'
     [rof_grid.rHDMAlk_h06]
-        network='HDMA_lake'
+        network='HDMA_lake_h06'
         model='mizuroute'
         network_type='vector'
         domain_nc="None"
         flow_name='DWroutedRunoff'
         runoff_name='basRunoff'
-        color='xkcd:blue'
+        color='xkcd:green'
     [rof_grid.rHDMAlk_irrig_limited]
         network='HDMA_lake'
         model='mizuroute'
@@ -100,11 +100,16 @@ eyr = 1980   # analysis end yr
         id_name='seg_id'
         down_id_name='Tosegment'
 
+    [reach_gpkg.HDMA_lake_h06] # global HDMA lake
+        file_name='hdma_global_stream.gpkg'
+        id_name='seg_id'
+        down_id_name='Tosegment'
+        
     [reach_gpkg.MERIT_Hydro]  # global MERIT
         file_name='rivEndMERIT_simplified_0003.gpkg'
         id_name='COMID'
         down_id_name='NextDownID'
-        
+
     [reach_gpkg.mosart] # global MOSART 0.5
         file_name='MOSART_routing_Global_0.5x0.5_c170601_flowline.gpkg'
         id_name='seg_id'
@@ -118,6 +123,10 @@ eyr = 1980   # analysis end yr
         id_name='hruid'
 
     [catch_gpkg.HDMA_lake] # global HDMA lake
+        file_name='hdma_hydrolake_global_catch_v1_0.01.gpkg'
+        id_name='ID'
+        
+    [catch_gpkg.HDMA_lake_h06] # global HDMA lake with H06 reservoir model
         file_name='hdma_hydrolake_global_catch_v1_0.01.gpkg'
         id_name='ID'
         
@@ -139,6 +148,10 @@ eyr = 1980   # analysis end yr
     [river_network.HDMA_lake] # global HDMA lake
         file_name='Network_topology_HDMA_HydroLake_v3.aug.nc'
         reach_ID ='seg_id'
+        
+    [river_network.HDMA_lake_h06] # global HDMA lake
+        file_name='Network_topology_HDMA_HydroLake_v4.aug.nc'
+        reach_ID ='seg_id' 
         
     [river_network.MERIT_Hydro] # global MERIT
         file_name='ntopo_MERIT_Hydro_v1.aug.nc'
