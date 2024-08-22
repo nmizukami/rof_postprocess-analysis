@@ -1,13 +1,26 @@
-import tomli
 import geopandas as gpd
-import fiona
+from pyogrio import read_dataframe
 import pandas as pd
 import numpy as np
+import yaml
 
-def load_toml(toml_file) -> dict:
-    """Load TOML data from file """
-    with open(toml_file, 'rb') as f:
-        return tomli.load(f)
+
+# in case toml module may not be available
+try:
+    import tomli
+    def load_toml(toml_file) -> dict:
+        """Load TOML data from file """
+        with open(toml_file, 'rb') as f:
+            return tomli.load(f)
+except ImportError:
+    pass #or anything to log
+
+
+def load_yaml(yaml_file) -> dict:
+    """Load yaml data from file """
+    with open(yaml_file, "r") as ymlfile:
+        return yaml.load(ymlfile, Loader=yaml.FullLoader)
+
 
 class AutoVivification(dict):
     """Implementation of perl's autovivification feature."""
@@ -19,27 +32,16 @@ class AutoVivification(dict):
             return value
 
 
-def records(filename, usecols, **kwargs):
-    """Load geopackage or shapefile with selected attributes as objects """
-    with fiona.open(filename, 'r') as src:
-        for feature in src:
-            f = {k: feature[k] for k in ['id', 'geometry']}
-            f['properties'] = {k: feature['properties'][k] for k in usecols}
-            yield f
-
-            
 def read_shps(shp_list,  usecols, **kwargs):
     """Load shapefiles with selected attributes in dataframe"""
     gdf_frame = []
     for shp in shp_list:
-        gdf_frame.append(gpd.GeoDataFrame.from_features(records(shp, usecols, **kwargs)))
+        gdf_frame.append(read_dataframe(shp, columns=usecols))
         print('Finished reading %s'%shp.strip('\n'))
-    df_catch = pd.concat(gdf_frame)
-    return df_catch
-
+    return pd.concat(gdf_frame)
 
 def get_index_array(a_array, b_array):
-    ''' 
+    '''
     Get index array where each index points to locataion in a_array. The order of index array corresponds to b_array
 
       e.g.,
