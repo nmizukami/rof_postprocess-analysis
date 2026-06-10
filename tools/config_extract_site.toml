@@ -1,0 +1,33 @@
+# 
+# This does not work gridded output - works with vector output with location ID
+
+# ---- CTSM case name
+#case = 'f09_f09_rHDMA' 
+case = 'f09_f09_rHDMAlk_mg17'
+#case = 'f09_f09_rHDMAlk_mg17_dfw'
+#case = 'f09_f09_rMERIT_mg17'
+#case = 'f09_f09_mg17_mosart' 
+
+# --- CTSM archive directory
+main_dir = '/glade/campaign/cgd/tss/people/mizukami/ctsm-mizuRoute/archive'
+
+# --- CTSM history file name pattern
+#     e.g., mizuroute.h.????-??-?? for <case_name>.mizuroute.h.yyyy-mm-dd.nc
+#     e.g., mosart.h0.????-??-??-???? for <case_name>.mosart.h0.yyyy-mm-dd-????.nc
+file_pattern = 'mizuroute.h.????'     # mizuroute
+#file_pattern = 'mosart.h0.????-??-??-?????'    # mosart
+
+# ---- ROF netCDF
+#domain_nc    = './ancillary_data/mosart0.5_domain.nc'
+domain_nc    = 'None'
+reachID      = 'reachID' # reach id variable name
+
+# --- gauge-river link data
+# 1. ref_flow_name:  name of reference flow data 
+# 2. ref_flow_dir:   directory name where a csv containing links between reference-flow site & river network reach is located
+# 3. site_reach_csv: name of csv 
+# 4.  reach_id:       name of column for river netowrk reach ID in csv
+ref_flow_name   = 'HB14'
+ref_flow_dir    = '/glade/campaign/ral/hap/mizukami/work/data/river_gauge_data'
+site_reach_csv  = 'HB14.HDMA_lake.asc'
+reach_id_csv    = 'route_id'

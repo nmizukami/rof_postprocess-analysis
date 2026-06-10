@@ -1,0 +1,19 @@
+# 
+# This does not work gridded output - works with vector output with location ID
+
+# ---- CTSM case name
+case = 'f09_f09_mg17_mosart' 
+
+# --- CTSM archive directory
+main_dir = '/glade/scratch/mizukami/ctsm-mizuRoute/archive'
+
+# --- CTSM history file name pattern
+#     e.g., mizuroute.h.????-??-?? for <case_name>.mizuroute.h.yyyy-mm-dd.nc
+#     e.g., mosart.h0.????-??-??-???? for <case_name>.mosart.h0.yyyy-mm-dd-????.nc
+file_pattern = 'mosart.h0.????-??-??-?????'    # mosart
+mask_var     = 'mask'
+ocean_mask_n = 2 
+
+# ---- ROF netCDF
+domain_nc    = './ancillary_data/mosart0.5_domain.nc'
+reachID      = 'reachID' # reach id variable name

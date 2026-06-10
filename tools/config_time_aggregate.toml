@@ -1,0 +1,35 @@
+# ---- CTSM case name
+#case = 'mosart_f09_f09'                    # mosart f09_f09
+#case = 'f09_f09'                 # mizuRoute f09_f09 
+case = 'test'                 # mizuRoute f09_f09 
+#case = 'f09_f09_no_flood'                 # mizuRoute f09_f09 
+#case = 'f09_f09_rMERIT'                         # mizuRoute
+#case = 'f09_f09_rHDMA'                          # mizuRoute 
+#case = 'f09_f09_rHDMAlk'                        # mizuRoute
+#case = 'f09_f09_rHDMAlk_direct_to_outlet'       # mizuRoute
+#case = 'f09_f09_rHDMAlk_direct_to_outlet_no_flood'       # mizuRoute
+#case = 'f09_f09_rHDMAlk_h06'                     # mizuRoute
+#case = 'f09_f09_rHDMAlk_irrig_limited'          # mizuRoute with irrigation restricted by river volume
+#case = 'f09_f09_rHDMAlk_irrig_unlimited'        # mizuRoute with irrigation
+#case = 'f09_f09_rHDMAlk_irrig_groundwater'      # mizuRoute with irrigation restricted by river volume and taken from groundwater
+
+# --- CTSM archive directory
+#main_dir = '/glade/campaign/cgd/tss/people/mizukami/ctsm-mizuRoute/archive'
+main_dir = '/glade/derecho/scratch/mizukami/ctsm-mizuRoute/archive'
+
+# --- CTSM history file name pattern
+#     e.g., mizuroute.h.????-??-?? for <case_name>.mizuroute.h.yyyy-mm-dd.nc
+file_pattern = 'mizuroute.h.????'     # mizuroute
+#file_pattern = 'mosart.h0i.????-??-??-?????'   # mosart
+
+# aggregation method: mean, first, last
+agg_method='mean'
+
+# --- misc.
+# some dataset use end of time step for time stamp. if so, make it to front time step
+day_shift = 0 
+
+# --- seasonality mean computation
+time_res = 'month'
+start_yr = 1960
+end_yr   = 1960

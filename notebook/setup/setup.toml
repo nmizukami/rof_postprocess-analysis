@@ -2,7 +2,7 @@
 
 # Directories
 case_dir       = '/glade/u/home/mizukami/proj/ctsm-mizuRoute/run_case'                #CESM case directory
-archive_dir    = '/glade/campaign/cgd/tss/people/mizukami/ctsm-mizuRoute/archive'       #CESM archive directory
+archive_dir    = '/glade/derecho/scratch/mizukami/ctsm-mizuRoute/archive'       #CESM archive directory
 geospatial_dir = '/glade/campaign/cgd/tss/people/mizukami/ctsm-mizuRoute/geospatial'    #including geospatial data (gpkg, geotif)
 ancillary_dir  = '/glade/u/home/mizukami/proj/ctsm-mizuRoute/postprocess+analysis//ancillary_data'
 ref_flow_dir   = '/glade/u/home/mizukami/proj/ctsm-mizuRoute/obs'
@@ -10,7 +10,7 @@ ref_flow_dir   = '/glade/u/home/mizukami/proj/ctsm-mizuRoute/obs'
 # simulation periods
 # now assuming all the simulations have the same periods and assuming start in January 1st and end in December 31st
 syr = 1965   # analysis start year 
-eyr = 1980   # analysis end yr
+eyr = 1969   # analysis end yr
 
 [rof_grid]
     [rof_grid.rHDMAlk]
@@ -150,7 +150,7 @@ eyr = 1980   # analysis end yr
         reach_ID ='seg_id'
         
     [river_network.HDMA_lake_h06] # global HDMA lake
-        file_name='Network_topology_HDMA_HydroLake_v4.aug.nc'
+        file_name='Network_topology_HDMA_HydroLake_v5.aug.nc'
         reach_ID ='seg_id' 
         
     [river_network.MERIT_Hydro] # global MERIT
