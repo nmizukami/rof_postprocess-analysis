@@ -98,3 +98,4 @@ notebook/NT_*.ipynb
 *.nc
 *.png
 *.gpkg
+*.txt
